@@ -91,14 +91,52 @@
     if (el) el.classList.remove('is-pending');
   });
 
-  // ---------- 4. Reading progress ----------
+  // ---------- 3b. Chapter openers: number, title and teaser rise in ----------
+  const openers = Array.from(document.querySelectorAll('.opener'));
+  if (!reduceMotion.matches) {
+    openers.forEach((el) => el.classList.add('is-pending'));
+    const openerIO = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.remove('is-pending');
+          obs.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.35 }
+    );
+    openers.forEach((el) => openerIO.observe(el));
+  }
+
+  // ---------- 4. Reading progress + chapter indicator ----------
   const bar = document.querySelector('.progress__bar');
+  const chapterBar = document.querySelector('.chapter-bar');
+  const chapters = Array.from(document.querySelectorAll('section[data-num]'));
+  const showChapter = () => {
+    if (!chapterBar) return;
+    const y = 24;
+    let current = null;
+    chapters.forEach((ch) => {
+      if (ch.getBoundingClientRect().top <= y) current = ch;
+    });
+    if (current && current.getBoundingClientRect().bottom < y) current = null;
+    // Hide over the full-screen title cards, which already name the chapter.
+    const under = document.elementFromPoint(Math.min(window.innerWidth - 1, 40), y);
+    const overTitleCard = under && under.closest && under.closest('.opener, .cover, .closing');
+    const visible = Boolean(current) && !overTitleCard;
+    chapterBar.classList.toggle('is-visible', visible);
+    if (current) {
+      chapterBar.querySelector('.chapter-bar__num').textContent = current.dataset.num;
+      chapterBar.querySelector('.chapter-bar__title').textContent = current.dataset.title;
+    }
+  };
   if (bar) {
     let ticking = false;
     const update = () => {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
       bar.style.setProperty('--p', p.toFixed(4));
+      showChapter();
       ticking = false;
     };
     window.addEventListener(
@@ -119,5 +157,6 @@
   window.addEventListener('beforeprint', () => {
     inlineScenes.forEach((s) => s.dataset.final && (s.dataset.reveal = s.dataset.final));
     appear.forEach((el) => el.classList.remove('is-pending'));
+    openers.forEach((el) => el.classList.remove('is-pending'));
   });
 })();

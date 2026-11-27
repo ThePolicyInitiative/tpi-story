@@ -222,6 +222,15 @@ function scene(id, reveal, inline = false) {
 }
 
 // ---------- chapters ----------
+// Full-screen title card that opens each chapter.
+const opener = (ch) => `
+    <header class="opener">
+      <div class="opener__inner">
+        <p class="opener__num"><span class="sr-only">${esc(c.ui.chapterLabel)} </span>${esc(ch.num)}</p>
+        <h2 class="opener__title" id="${esc(ch.id)}-title">${esc(ch.title)}</h2>
+        ${ch.teaser ? `<p class="opener__teaser">${md(ch.teaser)}</p>` : ''}
+      </div>
+    </header>`;
 function chapter(ch) {
   // The last step that shows a scene carries that scene's text equivalent.
   const lastIndexOf = {};
@@ -248,11 +257,8 @@ function chapter(ch) {
   const graphic = sceneIds.map((id, i) => scene(id, 0).replace('class="scene"', `class="scene${i === 0 ? ' is-active' : ''}"`)).join('');
 
   return `
-  <section class="chapter" id="${esc(ch.id)}" aria-labelledby="${esc(ch.id)}-title">
-    <header class="chapter__head">
-      <p class="chapter__num" aria-hidden="true">${esc(ch.num)}</p>
-      <h2 class="chapter__title" id="${esc(ch.id)}-title">${esc(ch.title)}</h2>
-    </header>
+  <section class="chapter" id="${esc(ch.id)}" aria-labelledby="${esc(ch.id)}-title" data-num="${esc(ch.num)}" data-title="${esc(ch.title)}">
+    ${opener(ch)}
     <div class="scrolly">
       <div class="scrolly__steps">${steps}</div>
       <div class="scrolly__graphic" aria-hidden="true"><div class="scrolly__frame">${graphic}</div></div>
@@ -262,16 +268,33 @@ function chapter(ch) {
 
 const q = c.questions;
 const questions = `
-  <section class="chapter chapter--questions" id="${esc(q.id)}" aria-labelledby="${esc(q.id)}-title">
-    <header class="chapter__head">
-      <p class="chapter__num" aria-hidden="true">${esc(q.num)}</p>
-      <h2 class="chapter__title" id="${esc(q.id)}-title">${esc(q.title)}</h2>
-      <p class="chapter__dek">${md(q.intro)}</p>
-    </header>
+  <section class="chapter chapter--questions" id="${esc(q.id)}" aria-labelledby="${esc(q.id)}-title" data-num="${esc(q.num)}" data-title="${esc(q.title)}">
+    ${opener(q)}
+    <p class="questions__intro" data-appear>${md(q.intro)}</p>
     <ol class="questions" role="list">
       ${q.items.map((t, i) => `<li class="question" data-appear><span class="question__num" aria-hidden="true">${i + 1}</span><span class="question__text">${md(t)}</span></li>`).join('')}
     </ol>
   </section>`;
+
+const pr = c.prologue;
+const prologue = pr
+  ? `
+  <section class="prologue" aria-label="${esc(pr.label)}">
+    ${pr.lines.map((l, i) => `<p class="prologue__line${i === pr.lines.length - 1 ? ' prologue__line--last' : ''}" data-appear><span>${md(l)}</span></p>`).join('')}
+  </section>`
+  : '';
+
+const cl = c.closing;
+const closing = cl
+  ? `
+  <section class="closing" aria-labelledby="closing-title">
+    <div class="closing__inner">
+      <p class="closing__kicker">${esc(cl.kicker)}</p>
+      <h2 class="closing__title" id="closing-title" data-appear>${esc(cl.title)}</h2>
+      <p class="closing__text">${md(cl.text)}</p>
+    </div>
+  </section>`
+  : '';
 
 const pu = c.purpose;
 const purpose = `
@@ -320,6 +343,7 @@ const html = `<!doctype html>
 <body>
 <a class="skip-link" href="#story">${esc(c.ui.skip)}</a>
 <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+<div class="chapter-bar" aria-hidden="true"><span class="chapter-bar__num"></span><span class="chapter-bar__title"></span></div>
 
 <header class="cover" id="top">
   <div class="cover__inner">
@@ -334,15 +358,15 @@ const html = `<!doctype html>
 </header>
 
 <main id="story" tabindex="-1">
+${prologue}
 ${c.chapters.map(chapter).join('\n')}
 ${questions}
 ${purpose}
+${closing}
 </main>
 
 <footer class="footer">
   <div class="footer__inner">
-    ${c.footer.notes.map((n) => `<p>${md(n)}</p>`).join('')}
-    ${source('cn')}
     <p class="footer__org">${logo}</p>
     <p><a href="#top">${esc(c.ui.backToTop)}</a></p>
   </div>

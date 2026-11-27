@@ -1,13 +1,11 @@
 {
   "lang": "en",
   "dir": "ltr",
-
   "meta": {
     "title": "Rebuilding Lebanon’s Fiscal Contract for a Fairer Society · The Policy Initiative",
     "description": "Lebanon’s 2027 draft budget balances at around $7 billion. Who pays, and who benefits? A visual story from The Policy Initiative’s policy roundtable concept note.",
     "shareTitle": "Lebanon’s 2027 draft budget balances at around $7 billion. Who pays, and who benefits?"
   },
-
   "ui": {
     "skip": "Skip to the story",
     "logoAlt": "The Policy Initiative",
@@ -17,23 +15,21 @@
     "textEquivalent": "Chart as text",
     "backToTop": "Back to top",
     "scrollCue": "Scroll to begin",
-    "differentScale": "Different scale from the previous chart"
+    "differentScale": "Different scale from the previous chart",
+    "chapterLabel": "Chapter"
   },
-
   "sources": {
     "cn": {
-      "text": "The Policy Initiative, “Rebuilding Lebanon’s Fiscal Contract for a Fairer Society,” concept note, policy roundtable, November 26, 2026, drawing on TPI research.",
+      "text": "TPI research, cited in the roundtable concept note (November 2026).",
       "url": ""
     }
   },
-
   "cover": {
     "label": "Policy Roundtable · The Policy Initiative",
     "title": "Rebuilding Lebanon’s Fiscal Contract for a Fairer Society",
     "hook": "Lebanon’s 2027 draft budget balances at around $7 billion. **Who pays, and who benefits?**",
     "dateline": "Concept note · November 26, 2026"
   },
-
   "chapters": [
     {
       "id": "balanced-budget",
@@ -44,31 +40,40 @@
           "scene": "spending",
           "reveal": 1,
           "text": [
-            "Lebanon’s financial collapse changed the size of the state. Public expenditure fell from about **$15.2 billion in 2019** to **$6 billion in 2026**."
+            "Start with the size of the state. In 2019, public expenditure stood at about **$15.2 billion**."
           ]
         },
         {
           "scene": "spending",
           "reveal": 2,
           "text": [
-            "The **2027 draft budget**, now before Parliament, would spend **around $7 billion**. All three bars are drawn on the same scale."
+            "Then came the financial collapse. By 2026, spending had fallen to **$6 billion**."
+          ]
+        },
+        {
+          "scene": "spending",
+          "reveal": 3,
+          "text": [
+            "The **2027 draft budget** would spend **around $7 billion**. Measured on the same scale, the state remains a fraction of what it was."
           ]
         },
         {
           "scene": "balance",
           "reveal": 1,
           "text": [
-            "On paper, the draft balances. Projected revenue and projected spending both come to **around $7 billion**, a projected deficit of zero."
+            "And on paper, it balances. Projected revenue: **around $7 billion**. Projected spending: **around $7 billion**. A projected deficit of zero."
           ]
         },
         {
           "scene": "balance",
           "reveal": 2,
           "text": [
-            "But a zero deficit leaves the state’s **debt and accumulated liabilities unaddressed**. It also reveals little about who finances the state and who benefits from its spending."
+            "But a zero deficit is not a clean slate. The state’s **debt and accumulated liabilities** remain unaddressed.",
+            "Nor does the balance say anything about who finances the state, or who benefits from it."
           ]
         }
-      ]
+      ],
+      "teaser": "On paper, the books close. That is where the questions begin."
     },
     {
       "id": "who-pays",
@@ -79,22 +84,24 @@
           "scene": "taxShares",
           "reveal": 1,
           "text": [
-            "TPI’s research shows that the tax burden has shifted toward lower-income households.",
-            "The **poorest half of households**, whose income equals 11% of GDP, paid **20% of all taxes in 2019** and **26% in 2026**."
+            "Compare two groups of Lebanese households.",
+            "The **poorest half** earn income equal to 11% of GDP. In 2019, they paid **20%** of all taxes. By 2026, they paid **26%**."
           ]
         },
         {
           "scene": "taxShares",
           "reveal": 2,
           "text": [
-            "Over the same period, the share paid by the **richest 1%**, whose income equals 20% of GDP and who hold about one-third of national wealth, fell from **14% to 7%**."
+            "At the other end, the **richest 1%** earn income equal to 20% of GDP and hold about one-third of national wealth.",
+            "Over the same years, their share of all taxes fell from **14% to 7%**."
           ]
         },
         {
           "scene": "taxMix",
           "reveal": 1,
           "text": [
-            "**Consumption taxes account for about 79% of tax revenue.** Income, profits and wealth remain largely untaxed."
+            "Look at what Lebanon taxes. **About 79%** of tax revenue comes from **consumption taxes**, collected on what households buy.",
+            "Income, profits and wealth remain largely untaxed."
           ]
         },
         {
@@ -108,10 +115,12 @@
           "scene": "draftRevenue",
           "reveal": 2,
           "text": [
-            "**Fuel taxes and VAT account for more than half** of the additional tax revenue. Exemptions are left intact without justification, and revenue targets rest on optimistic assumptions amid a contracting economy."
+            "Where would the new money come from? **Fuel taxes and VAT** account for **more than half** of the additional tax revenue.",
+            "Exemptions stay in place without justification, and revenue targets rest on optimistic assumptions amid a contracting economy."
           ]
         }
-      ]
+      ],
+      "teaser": "The tax burden has shifted toward the households with the least."
     },
     {
       "id": "who-benefits",
@@ -122,24 +131,27 @@
           "scene": "traceable",
           "reveal": 1,
           "text": [
-            "Public spending traceable to beneficiaries fell from **$13 billion in 2019** to **$4.3 billion in 2026**."
+            "Now follow the money out.",
+            "Public spending that can be traced to the people it benefits fell from **$13 billion in 2019** to **$4.3 billion in 2026**."
           ]
         },
         {
           "scene": "poorest",
           "reveal": 1,
           "text": [
-            "The amount reaching the **poorest half of households**, mostly through public hospitalization and social protection, fell from **$814 million in 2019** to **$617 million in 2026**."
+            "For the **poorest half of households**, the amount fell from **$814 million** to **$617 million**.",
+            "What still reached them came mostly through public hospitalization and social protection."
           ]
         },
         {
           "scene": "youth",
           "reveal": 1,
           "text": [
-            "In 2026, **youth and families received only 15%** of traceable spending."
+            "And for every $100 of traceable spending in 2026, **youth and families received $15**."
           ]
         }
-      ]
+      ],
+      "teaser": "Less spending reaches people, and less of it reaches the poorest."
     },
     {
       "id": "spending-increase",
@@ -150,27 +162,28 @@
           "scene": "increase",
           "reveal": 1,
           "text": [
-            "In the 2027 draft, **personnel costs absorb more than 90%** of the proposed spending increase."
+            "The 2027 draft raises spending. **More than 90%** of that increase goes to **personnel costs**."
           ]
         },
         {
           "scene": "increase",
           "reveal": 2,
           "text": [
-            "That would bring **personnel costs to 65% of the full budget**."
+            "That would make personnel costs **65% of the entire budget**."
           ]
         },
         {
           "scene": "increase",
           "reveal": 3,
           "text": [
-            "**Capital spending would rise by only around $25 million**, despite vast reconstruction and infrastructure needs. Resources reaching beneficiaries directly remain limited."
+            "Capital spending, meanwhile, would rise by **only around $25 million**, in a country with vast reconstruction and infrastructure needs.",
+            "Resources that reach people directly remain limited."
           ]
         }
-      ]
+      ],
+      "teaser": "The 2027 draft spends more. Almost all of the increase goes to one line."
     }
   ],
-
   "scenes": {
     "spending": {
       "title": "Public expenditure",
@@ -182,14 +195,32 @@
           "type": "bars",
           "max": 15.2,
           "items": [
-            { "label": "2019", "value": 15.2, "display": "$15.2bn", "sr": "about 15.2 billion dollars", "from": 1 },
-            { "label": "2026", "value": 6, "display": "$6bn", "sr": "6 billion dollars", "from": 1 },
-            { "label": "2027 draft", "value": 7, "display": "~$7bn", "sr": "around 7 billion dollars, draft", "draft": true, "from": 2 }
+            {
+              "label": "2019",
+              "value": 15.2,
+              "display": "$15.2bn",
+              "sr": "about 15.2 billion dollars",
+              "from": 1
+            },
+            {
+              "label": "2026",
+              "value": 6,
+              "display": "$6bn",
+              "sr": "6 billion dollars",
+              "from": 2
+            },
+            {
+              "label": "2027 draft",
+              "value": 7,
+              "display": "~$7bn",
+              "sr": "around 7 billion dollars, draft",
+              "draft": true,
+              "from": 3
+            }
           ]
         }
       ]
     },
-
     "balance": {
       "title": "The 2027 draft budget balances",
       "unit": "US$ billion, same scale as the previous chart",
@@ -201,8 +232,22 @@
           "type": "bars",
           "max": 15.2,
           "items": [
-            { "label": "Revenue, 2027 draft", "value": 7, "display": "~$7bn", "sr": "around 7 billion dollars, projected", "draft": true, "from": 1 },
-            { "label": "Spending, 2027 draft", "value": 7, "display": "~$7bn", "sr": "around 7 billion dollars, projected", "draft": true, "from": 1 }
+            {
+              "label": "Revenue, 2027 draft",
+              "value": 7,
+              "display": "~$7bn",
+              "sr": "around 7 billion dollars, projected",
+              "draft": true,
+              "from": 1
+            },
+            {
+              "label": "Spending, 2027 draft",
+              "value": 7,
+              "display": "~$7bn",
+              "sr": "around 7 billion dollars, projected",
+              "draft": true,
+              "from": 1
+            }
           ]
         },
         {
@@ -218,7 +263,6 @@
         }
       ]
     },
-
     "taxShares": {
       "title": "Share of all taxes paid",
       "unit": "% of total taxes, 2019 and 2026",
@@ -228,19 +272,34 @@
         {
           "type": "slope",
           "max": 30,
-          "years": ["2019", "2026"],
+          "years": [
+            "2019",
+            "2026"
+          ],
           "series": [
             {
               "label": "Poorest half of households",
-              "values": [20, 26],
-              "display": ["20%", "26%"],
+              "values": [
+                20,
+                26
+              ],
+              "display": [
+                "20%",
+                "26%"
+              ],
               "tone": "accent",
               "from": 1
             },
             {
               "label": "Richest 1%",
-              "values": [14, 7],
-              "display": ["14%", "7%"],
+              "values": [
+                14,
+                7
+              ],
+              "display": [
+                "14%",
+                "7%"
+              ],
               "tone": "primary",
               "from": 2
             }
@@ -248,7 +307,6 @@
         }
       ]
     },
-
     "taxMix": {
       "title": "Where tax revenue comes from",
       "unit": "% of tax revenue",
@@ -262,13 +320,20 @@
           "headlineSr": "About 79 percent",
           "denominator": "of tax revenue comes from consumption taxes",
           "segments": [
-            { "label": "Consumption taxes", "value": 79, "tone": "accent" },
-            { "label": "All other taxes", "value": 21, "tone": "rest" }
+            {
+              "label": "Consumption taxes",
+              "value": 79,
+              "tone": "accent"
+            },
+            {
+              "label": "All other taxes",
+              "value": 21,
+              "tone": "rest"
+            }
           ]
         }
       ]
     },
-
     "draftRevenue": {
       "title": "Revenue in the 2027 draft",
       "unit": "Projected change",
@@ -289,13 +354,19 @@
           "headline": "More than half",
           "denominator": "of the additional tax revenue, 2027 draft",
           "segments": [
-            { "label": "Fuel taxes and VAT", "value": 50, "atLeast": true, "tone": "accent" }
+            {
+              "label": "Fuel taxes and VAT",
+              "value": 50,
+              "atLeast": true,
+              "tone": "accent"
+            }
           ],
-          "ticks": [50]
+          "ticks": [
+            50
+          ]
         }
       ]
     },
-
     "traceable": {
       "title": "Public spending traceable to beneficiaries",
       "unit": "US$ billion, same scale",
@@ -306,13 +377,24 @@
           "type": "bars",
           "max": 13,
           "items": [
-            { "label": "2019", "value": 13, "display": "$13bn", "sr": "13 billion dollars", "from": 1 },
-            { "label": "2026", "value": 4.3, "display": "$4.3bn", "sr": "4.3 billion dollars", "from": 1 }
+            {
+              "label": "2019",
+              "value": 13,
+              "display": "$13bn",
+              "sr": "13 billion dollars",
+              "from": 1
+            },
+            {
+              "label": "2026",
+              "value": 4.3,
+              "display": "$4.3bn",
+              "sr": "4.3 billion dollars",
+              "from": 1
+            }
           ]
         }
       ]
     },
-
     "poorest": {
       "title": "Spending reaching the poorest half of households",
       "unit": "US$ million",
@@ -324,8 +406,20 @@
           "type": "bars",
           "max": 814,
           "items": [
-            { "label": "2019", "value": 814, "display": "$814m", "sr": "814 million dollars", "from": 1 },
-            { "label": "2026", "value": 617, "display": "$617m", "sr": "617 million dollars", "from": 1 }
+            {
+              "label": "2019",
+              "value": 814,
+              "display": "$814m",
+              "sr": "814 million dollars",
+              "from": 1
+            },
+            {
+              "label": "2026",
+              "value": 617,
+              "display": "$617m",
+              "sr": "617 million dollars",
+              "from": 1
+            }
           ]
         },
         {
@@ -335,7 +429,6 @@
         }
       ]
     },
-
     "youth": {
       "title": "Who received traceable spending in 2026",
       "unit": "Each square is 1% of traceable spending",
@@ -349,11 +442,13 @@
           "headline": "15%",
           "headlineSr": "15 percent",
           "denominator": "of traceable spending went to youth and families, 2026",
-          "legend": ["Youth and families", "All other traceable spending"]
+          "legend": [
+            "Youth and families",
+            "All other traceable spending"
+          ]
         }
       ]
     },
-
     "increase": {
       "title": "The proposed spending increase",
       "unit": "2027 draft budget",
@@ -369,9 +464,16 @@
           "headlineSr": "More than 90 percent",
           "denominator": "of the proposed spending increase goes to personnel costs",
           "segments": [
-            { "label": "Personnel costs", "value": 90, "atLeast": true, "tone": "primary" }
+            {
+              "label": "Personnel costs",
+              "value": 90,
+              "atLeast": true,
+              "tone": "primary"
+            }
           ],
-          "ticks": [90]
+          "ticks": [
+            90
+          ]
         },
         {
           "type": "share",
@@ -380,8 +482,16 @@
           "headlineSr": "65 percent",
           "denominator": "of the full 2027 draft budget would be personnel costs",
           "segments": [
-            { "label": "Personnel costs", "value": 65, "tone": "primary" },
-            { "label": "Everything else", "value": 35, "tone": "rest" }
+            {
+              "label": "Personnel costs",
+              "value": 65,
+              "tone": "primary"
+            },
+            {
+              "label": "Everything else",
+              "value": 35,
+              "tone": "rest"
+            }
           ]
         },
         {
@@ -401,37 +511,50 @@
       ]
     }
   },
-
   "questions": {
     "id": "next-five-years",
     "num": "05",
     "title": "What should Lebanon’s budget do over the next five years?",
-    "intro": "The roundtable shifts the debate from these shortcomings to what the budget should become. It asks four questions.",
+    "intro": "Over the next five years, Lebanon’s budget will have to answer four.",
     "items": [
       "How should Lebanon raise and allocate public resources?",
       "Who should bear the cost?",
       "Who should benefit?",
       "What reforms would make those choices possible?"
-    ]
+    ],
+    "teaser": "A budget can balance and still leave the hardest questions unanswered."
   },
-
   "purpose": {
     "id": "the-roundtable",
-    "title": "Why this roundtable",
-    "intro": "The roundtable brings together policymakers, public officials and experts to work towards a more equitable, efficient and sustainable fiscal system.",
+    "title": "From shortcomings to a roadmap",
+    "intro": "TPI’s roundtable brings policymakers, public officials and experts together to move the debate from what the budget gets wrong to what it should become.",
     "items": [
-      { "title": "A shared starting point", "text": "Participants will use TPI’s research on who pays taxes and who benefits from public spending as a common evidence base." },
-      { "title": "Concrete options", "text": "They will debate options for taxation, exemptions, spending and public financial management." },
-      { "title": "Feasibility and trade-offs", "text": "They will examine the feasibility and trade-offs of reforms, including their effects on vulnerable households." },
-      { "title": "What comes next", "text": "Areas of agreement and open questions will inform TPI’s forthcoming report, **“What Should the Budget Be?”**" }
+      {
+        "title": "A shared starting point",
+        "text": "Participants will use TPI’s research on who pays taxes and who benefits from public spending as a common evidence base."
+      },
+      {
+        "title": "Concrete options",
+        "text": "They will debate options for taxation, exemptions, spending and public financial management."
+      },
+      {
+        "title": "Feasibility and trade-offs",
+        "text": "They will examine the feasibility and trade-offs of reforms, including their effects on vulnerable households."
+      }
     ]
   },
-
-  "footer": {
-    "notes": [
-      "All figures are taken from TPI’s concept note for the policy roundtable, which draws on TPI research.",
-      "Figures labelled “2027 draft” refer to the draft budget now before Parliament. They are projections, not outcomes."
-    ],
-    "org": "The Policy Initiative"
+  "prologue": {
+    "label": "Prologue",
+    "lines": [
+      "Every budget is a contract between a state and its people.",
+      "It decides **who pays** for the state, and **who the state serves**.",
+      "Lebanon’s 2027 draft budget, now before Parliament, balances on paper at **around $7 billion**.",
+      "A balance answers one question. This story follows the two it leaves open."
+    ]
+  },
+  "closing": {
+    "kicker": "The question ahead",
+    "title": "What should the budget be?",
+    "text": "Areas of agreement and open questions from the roundtable will inform TPI’s forthcoming report of the same name."
   }
 }
