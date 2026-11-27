@@ -13,9 +13,19 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/montserrat-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/montserrat-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=825b0dbe">
-<script>document.documentElement.classList.add('js')</script>
-<script src="script.js?v=3841d4ca" defer></script>
+<link rel="stylesheet" href="styles.css?v=dc030029">
+<script>
+document.documentElement.classList.add('js');
+// Always open on the cover: no restored scroll position on reload, and no jump for
+// links ending in #story / #top. Chapter links (e.g. #who-pays) still work.
+try {
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  var h = location.hash;
+  window.__tpiStartAtTop = !h || h === '#story' || h === '#top';
+  if (h === '#story' || h === '#top') history.replaceState(null, '', location.pathname + location.search);
+} catch (e) {}
+</script>
+<script src="script.js?v=2effd1d8" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#story">Skip to the story</a>
@@ -42,9 +52,6 @@
 
 <main id="story" tabindex="-1">
 
-  <section class="prologue" aria-label="Prologue">
-    <p class="prologue__line prologue__line--last" data-appear><span>Every budget is a contract between a state and its people. It decides <strong>who pays</strong> for the state, and <strong>who it serves</strong>.</span></p>
-  </section>
 
   <section class="chapter" id="balanced-budget" aria-labelledby="balanced-budget-title" data-num="01" data-title="A balanced budget. What does it tell us?">
     
@@ -118,35 +125,8 @@
     </div></figure>
         <p class="sr-only">Chart as text: Horizontal bar chart of public expenditure: about $15.2 billion in 2019, $6 billion in 2026, and around $7 billion in the 2027 draft budget.</p>
       </div>
-      <div class="step" data-scene="balance" data-reveal="1">
-        <div class="step__text"><p>On paper, it balances: projected revenue and spending are both <strong>around $7 billion</strong>.</p></div>
-        <figure class="step__figure" aria-label="The 2027 draft budget balances">
-    <div class="scene" data-scene="balance" data-reveal="1">
-      <div class="scene__head">
-        <p class="scene__title">The 2027 draft budget balances <span class="tag tag--draft">2027 draft</span></p>
-        <p class="scene__unit">US$ billion, same scale as the previous chart</p>
-      </div>
-      <div class="scene__body"><div class="panel panel--bars"><ul class="bars" role="list">
-        <li class="bar-row is-draft" data-from="1" style="--v:0.4605">
-          <span class="bar-row__label">Revenue, 2027 draft</span>
-          <span class="bar-row__track">
-            <span class="bar-row__fill" aria-hidden="true"></span>
-            <span class="bar-row__value"><span aria-hidden="true">~$7bn</span><span class="sr-only">around 7 billion dollars, projected</span></span>
-          </span>
-        </li>
-        <li class="bar-row is-draft" data-from="1" style="--v:0.4605">
-          <span class="bar-row__label">Spending, 2027 draft</span>
-          <span class="bar-row__track">
-            <span class="bar-row__fill" aria-hidden="true"></span>
-            <span class="bar-row__value"><span aria-hidden="true">~$7bn</span><span class="sr-only">around 7 billion dollars, projected</span></span>
-          </span>
-        </li></ul></div><div class="panel panel--note" data-from="1"><p class="chart-note">Projected deficit: <strong>zero</strong></p></div></div>
-      
-    </div></figure>
-        
-      </div>
       <div class="step" data-scene="balance" data-reveal="2">
-        <div class="step__text"><p>But a zero deficit leaves <strong>debt and accumulated liabilities</strong> unaddressed, and says nothing about who pays or who benefits.</p></div>
+        <div class="step__text"><p>On paper it balances: projected revenue and spending are both <strong>around $7 billion</strong>. But a zero deficit leaves <strong>debt and accumulated liabilities</strong> unaddressed.</p></div>
         <figure class="step__figure" aria-label="The 2027 draft budget balances">
     <div class="scene" data-scene="balance" data-reveal="2">
       <div class="scene__head">
@@ -664,21 +644,13 @@
     </ol>
   </section>
 
-  <section class="purpose" id="the-roundtable" aria-labelledby="the-roundtable-title">
-    <div class="purpose__inner">
-      <h2 class="purpose__title" id="the-roundtable-title">From shortcomings to a roadmap</h2>
-      <p class="purpose__intro">TPI’s roundtable brings policymakers, public officials and experts together to decide what the budget should become.</p>
-      <ol class="purpose__list" role="list">
-        <li data-appear><span class="purpose__num" aria-hidden="true">01</span><h3>A shared starting point</h3><p>TPI’s research on who pays and who benefits.</p></li><li data-appear><span class="purpose__num" aria-hidden="true">02</span><h3>Concrete options</h3><p>Taxation, exemptions, spending and public financial management.</p></li><li data-appear><span class="purpose__num" aria-hidden="true">03</span><h3>Feasibility and trade-offs</h3><p>Including the effects on vulnerable households.</p></li>
-      </ol>
-    </div>
-  </section>
 
   <section class="closing" aria-labelledby="closing-title">
     <div class="closing__inner">
-      <p class="closing__kicker">The question ahead</p>
+      <p class="closing__kicker">The roundtable</p>
       <h2 class="closing__title" id="closing-title" data-appear>What should the budget be?</h2>
-      <p class="closing__text">Areas of agreement and open questions from the roundtable will inform TPI’s forthcoming report of the same name.</p>
+      <p class="closing__text">Starting from TPI’s research, policymakers, public officials and experts will debate options for taxation, exemptions, spending and public financial management, and weigh their feasibility and trade-offs, including for vulnerable households.</p>
+      <p class="closing__note">Areas of agreement and open questions will inform TPI’s forthcoming report, <strong>“What Should the Budget Be?”</strong></p>
     </div>
   </section>
 </main>

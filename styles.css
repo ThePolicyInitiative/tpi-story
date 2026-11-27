@@ -650,3 +650,37 @@ html:not(.js) .chapter-bar { display: none; }
 }
 .prologue__line--last:only-child { font-weight: 700; color: var(--navy); }
 @media (max-width: 40em) { .question { grid-template-columns: 2rem minmax(0, 1fr); } .question__num { font-size: var(--step-2); } .question__text { max-inline-size: none; } }
+
+/* ---------- Even shorter ---------- */
+[tabindex="-1"]:focus { outline: none; }
+.opener { min-block-size: 48vh; min-block-size: 48svh; }
+.opener__inner { padding-block: clamp(2rem, 6vh, 3.5rem); }
+.opener__num { font-size: clamp(3.5rem, 2rem + 6vw, 7rem); }
+.opener__title { font-size: clamp(2.1rem, 1.5rem + 2.6vw, 3.75rem); }
+.opener__teaser { font-size: var(--step-1); margin-block-start: 1rem; }
+.chapter .scrolly { padding-block: 0; }
+
+@media (min-width: 60em) {
+  .js .step { min-block-size: 52vh; padding-block: 1rem; }
+  /* First beat: starts low enough that its card is level with the chart when the chart locks. */
+  .js .step:first-child { min-block-size: 0; justify-content: flex-start; padding-block: calc(50vh - 6.5rem) 2rem; }
+  /* Last beat: leaves room below so the chart stays locked while the card is centred. */
+  .js .step:last-child { min-block-size: 0; justify-content: flex-start; padding-block: 2rem calc(50vh - 6.5rem); }
+  .js .step:first-child:last-child { padding-block: calc(50vh - 6.5rem); }
+}
+@media (max-width: 59.99em) {
+  .chapter .scrolly { padding-block: 2rem; }
+}
+
+.questions__intro { padding-block-start: clamp(1.5rem, 4vh, 2.5rem); font-size: var(--step-1); }
+.questions { padding-block: 0.5rem clamp(2rem, 5vh, 3rem); }
+.question { padding-block: clamp(1rem, 2.5vh, 1.5rem); }
+.question__num, .question__text { font-size: var(--step-2); }
+.question__text { max-inline-size: 26ch; }
+
+.closing { min-block-size: 0; }
+.closing__inner { padding-block: clamp(3rem, 9vh, 5rem); }
+.closing__title { font-size: clamp(2.5rem, 1.5rem + 4.5vw, 5.5rem); }
+.closing__text { font-size: var(--step-1); max-inline-size: 46ch; margin-block-start: 1.5rem; }
+.closing__note { font-size: var(--step-1); max-inline-size: 46ch; margin-block-start: 1rem; color: var(--accent-on-navy); }
+.closing__note strong { color: var(--paper); }
