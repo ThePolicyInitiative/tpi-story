@@ -684,3 +684,60 @@ html:not(.js) .chapter-bar { display: none; }
 .closing__text { font-size: var(--step-1); max-inline-size: 46ch; margin-block-start: 1.5rem; }
 .closing__note { font-size: var(--step-1); max-inline-size: 46ch; margin-block-start: 1rem; color: var(--accent-on-navy); }
 .closing__note strong { color: var(--paper); }
+
+/* ---------- Bigger charts ---------- */
+/* Phones and tablets (inline charts). */
+.bar-row__track { block-size: 2.75rem; }
+.bar-row__value { font-size: 1.1875rem; }
+.bar-row__label { font-size: 1rem; }
+.slope__body { block-size: 20rem; }
+.slope__lbl { font-size: 1.0625rem; }
+.slope__labels--end strong { font-size: 1.5rem; }
+.slope__name { font-size: 0.875rem; }
+.share__track { block-size: 2.5rem; }
+.share__labels { font-size: 0.9375rem; }
+.waffle { max-inline-size: 22rem; }
+.scale-strip { block-size: 1.75rem; }
+
+/* Desktop: wider chart column; the text cards stay a comfortable reading width. */
+@media (min-width: 60em) {
+  .js .scrolly {
+    max-inline-size: 88rem;
+    grid-template-columns: minmax(18rem, 4fr) minmax(0, 8fr);
+    gap: clamp(2rem, 4vw, 4rem);
+  }
+  .js .step__text { max-inline-size: 27rem; }
+  .js .scrolly__frame .scene { padding: clamp(1.5rem, 2.2vw, 2.5rem); }
+}
+@media (min-width: 60em) and (min-height: 50.01em) {
+  .js .scrolly__frame .scene__title { font-size: clamp(1.3rem, 1rem + 0.6vw, 1.7rem); }
+  .js .scrolly__frame .scene__unit { font-size: 0.9375rem; }
+  .js .scrolly__frame .bars { gap: 1.25rem; }
+  .js .scrolly__frame .bar-row { grid-template-columns: 11rem minmax(0, 1fr); }
+  .js .scrolly__frame .bar-row__label { font-size: 1.125rem; }
+  .js .scrolly__frame .bar-row__track { block-size: 3.5rem; margin-inline-end: 7rem; }
+  .js .scrolly__frame .bar-row__value { font-size: 1.5rem; }
+  .js .scrolly__frame .chart-note { font-size: 1.125rem; }
+  .js .scrolly__frame .unresolved__text { font-size: 1.375rem; }
+  .js .scrolly__frame .slope { --cols: 4.5rem minmax(4rem, 1fr) minmax(10rem, 14rem); }
+  .js .scrolly__frame .slope__body { block-size: min(26rem, 48vh); }
+  .js .scrolly__frame .slope__years { font-size: 0.9375rem; }
+  .js .scrolly__frame .slope__lbl { font-size: 1.3rem; }
+  .js .scrolly__frame .slope__labels--end strong { font-size: 2rem; }
+  .js .scrolly__frame .slope__name { font-size: 1rem; }
+  .js .scrolly__frame .slope__line { stroke-width: 5; }
+  .js .scrolly__frame .slope__dot { inline-size: 1.1rem; block-size: 1.1rem; margin-block-start: -0.55rem; margin-inline-start: -0.55rem; }
+  .js .scrolly__frame .share__headline { font-size: 1.125rem; }
+  .js .scrolly__frame .share__headline strong { font-size: clamp(2.25rem, 1.5rem + 1.8vw, 3.25rem); }
+  .js .scrolly__frame .share__track { block-size: 3rem; }
+  .js .scrolly__frame .share__axis { font-size: 0.875rem; }
+  .js .scrolly__frame .share__labels { font-size: 1.0625rem; }
+  .js .scrolly__frame .waffle { max-inline-size: min(26rem, 44vh); gap: 6px; }
+  .js .scrolly__frame .stat__value { font-size: clamp(3rem, 2rem + 3vw, 4.75rem); }
+  .js .scrolly__frame .stat__label { font-size: 1.125rem; }
+  /* The three-figure chart (chapter 04) stays inside the screen. */
+  .js .scrolly__frame [data-scene="increase"] .share__headline strong,
+  .js .scrolly__frame [data-scene="increase"] .stat__value { font-size: clamp(1.9rem, 1.4rem + 1.2vw, 2.6rem); }
+  .js .scrolly__frame [data-scene="increase"] .share__track { block-size: 2.25rem; }
+  .js .scrolly__frame [data-scene="increase"] .scene__body > .panel + .panel { margin-block-start: 1.25rem; }
+}

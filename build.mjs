@@ -349,13 +349,13 @@ const html = `<!doctype html>
 <script>
 document.documentElement.classList.add('js');
 // Always open on the cover: no restored scroll position on reload, and no jump for
-// links ending in #story / #top. Chapter links (e.g. #who-pays) still work.
+// any link ending in #… (old shared links such as #story or #balanced-budget included).
 try {
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-  var h = location.hash;
-  window.__tpiStartAtTop = !h || h === '#story' || h === '#top';
-  if (h === '#story' || h === '#top') history.replaceState(null, '', location.pathname + location.search);
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  window.scrollTo(0, 0);
 } catch (e) {}
+window.__tpiStartAtTop = true;
 </script>
 <script src="${base}script.js?v=${jsV}" defer></script>
 </head>
