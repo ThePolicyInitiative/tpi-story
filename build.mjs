@@ -12,11 +12,18 @@
 // script.js only adds the scroll-driven chart states on top.
 
 import { readFile, writeFile, mkdir, cp, rm } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 
 const lang = process.argv[2] || 'en';
 const c = JSON.parse(await readFile(new URL(`./content/${lang}.json`, import.meta.url), 'utf8'));
 const outDir = lang === 'en' ? '.' : lang;
 const base = lang === 'en' ? '' : '../';
+
+// Version stamps so browsers fetch the new CSS/JS after each publish instead of a cached copy.
+const stamp = async (f) =>
+  createHash('sha1').update(await readFile(new URL(`./${f}`, import.meta.url))).digest('hex').slice(0, 8);
+const cssV = await stamp('styles.css');
+const jsV = await stamp('script.js');
 
 // ---------- helpers ----------
 const esc = (s) =>
@@ -337,9 +344,9 @@ const html = `<!doctype html>
 <link rel="icon" href="${base}assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="${base}assets/fonts/montserrat-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${base}assets/fonts/montserrat-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="${base}styles.css">
+<link rel="stylesheet" href="${base}styles.css?v=${cssV}">
 <script>document.documentElement.classList.add('js')</script>
-<script src="${base}script.js" defer></script>
+<script src="${base}script.js?v=${jsV}" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#story">${esc(c.ui.skip)}</a>
