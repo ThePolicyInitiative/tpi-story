@@ -26,7 +26,26 @@ node serve.mjs
 
 Then open http://localhost:8080.
 
-**To share it as a link (Netlify):**
+**Live link (GitHub Pages):** https://thepolicyinitiative.github.io/tpi-story/
+Repository: https://github.com/ThePolicyInitiative/tpi-story. The `main` branch holds the source, and `gh-pages` holds the published page.
+
+**To update the live page**, run these commands one after another in this folder:
+
+```powershell
+node build.mjs
+```
+
+```powershell
+git add -A; git commit -m "Update story"; git push
+```
+
+```powershell
+git subtree push --prefix dist origin gh-pages
+```
+
+GitHub republishes within a minute or two at the same URL.
+
+**Alternative: Netlify**
 1. Run `node build.mjs`.
 2. Go to https://app.netlify.com/drop and drag the `dist` folder onto the page. Netlify returns a public URL, such as `something.netlify.app`, that you can send to anyone.
 3. To update the page later, rebuild, open the site in Netlify and go to **Deploys**, then drag `dist` there again. The URL stays the same.
