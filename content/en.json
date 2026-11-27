@@ -189,7 +189,6 @@
       "title": "Public expenditure",
       "unit": "US$ billion, all bars on the same scale",
       "summary": "Horizontal bar chart of public expenditure: about $15.2 billion in 2019, $6 billion in 2026, and around $7 billion in the 2027 draft budget.",
-      "source": "cn",
       "panels": [
         {
           "type": "bars",
@@ -225,7 +224,6 @@
       "title": "The 2027 draft budget balances",
       "unit": "US$ billion, same scale as the previous chart",
       "summary": "Two equal bars: projected revenue and projected spending in the 2027 draft budget are both around $7 billion, a projected deficit of zero. A separate note states that public debt and accumulated liabilities remain unaddressed.",
-      "source": "cn",
       "draft": true,
       "panels": [
         {
@@ -267,7 +265,6 @@
       "title": "Share of all taxes paid",
       "unit": "% of total taxes, 2019 and 2026",
       "summary": "Slope chart of the share of all taxes paid. The poorest half of households rose from 20% in 2019 to 26% in 2026. The richest 1% fell from 14% to 7%.",
-      "source": "cn",
       "panels": [
         {
           "type": "slope",
@@ -311,7 +308,6 @@
       "title": "Where tax revenue comes from",
       "unit": "% of tax revenue",
       "summary": "Part-to-whole bar: consumption taxes account for about 79% of tax revenue; all other taxes make up the remainder.",
-      "source": "cn",
       "panels": [
         {
           "type": "share",
@@ -338,7 +334,6 @@
       "title": "Revenue in the 2027 draft",
       "unit": "Projected change",
       "summary": "The 2027 draft budget projects total revenue rising by 14.2%. Fuel taxes and VAT account for more than half of the additional tax revenue.",
-      "source": "cn",
       "draft": true,
       "panels": [
         {
@@ -371,7 +366,6 @@
       "title": "Public spending traceable to beneficiaries",
       "unit": "US$ billion, same scale",
       "summary": "Horizontal bar chart: public spending traceable to beneficiaries fell from $13 billion in 2019 to $4.3 billion in 2026.",
-      "source": "cn",
       "panels": [
         {
           "type": "bars",
@@ -400,7 +394,6 @@
       "unit": "US$ million",
       "scaleNote": true,
       "summary": "Horizontal bar chart: spending reaching the poorest half of households fell from $814 million in 2019 to $617 million in 2026, mostly through public hospitalization and social protection.",
-      "source": "cn",
       "panels": [
         {
           "type": "bars",
@@ -433,7 +426,6 @@
       "title": "Who received traceable spending in 2026",
       "unit": "Each square is 1% of traceable spending",
       "summary": "Grid of 100 squares, each representing 1% of traceable public spending in 2026. Fifteen squares are highlighted: youth and families received 15%.",
-      "source": "cn",
       "panels": [
         {
           "type": "waffle",
@@ -453,7 +445,6 @@
       "title": "The proposed spending increase",
       "unit": "2027 draft budget",
       "summary": "Three figures from the 2027 draft budget. First, personnel costs absorb more than 90% of the proposed spending increase. Second, personnel costs would account for 65% of the full budget. Third, capital spending would rise by around $25 million, shown against the full draft budget of around $7 billion.",
-      "source": "cn",
       "draft": true,
       "inlineOnlyNew": true,
       "panels": [
