@@ -59,7 +59,7 @@ If the folder is in a Git repository connected to Netlify, `netlify.toml` alread
 - `chapters[].steps[]`: each step is one story beat, with text paragraphs plus a `scene` and a `reveal` level. Text in `**double asterisks**` is shown in bold.
 - `scenes{}`: one chart per scene, made of panels. The panel types are `bars`, `slope`, `share`, `waffle`, `stat`, `increase`, `note` and `unresolved`. Any panel, bar or line with `"from": n` appears when a step reaches `reveal: n`.
 - `display` is the visible label (for example `~$7bn`). `sr` is how screen readers say it (for example "around 7 billion dollars").
-- Each scene's `summary` is its text equivalent. It appears under a "Chart as text" toggle beneath the last step that uses the scene.
+- Each scene’s `summary` is its text equivalent. It is not shown on screen but is read by screen readers after the last step that uses the scene.
 - Charts currently show no source line. To bring one back, add `"source": "cn"` to a scene; it uses the citation in `sources.cn`, which links to `sources.cn.url` if you fill it in.
 
 ## Behaviour

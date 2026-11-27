@@ -246,7 +246,8 @@ function chapter(ch) {
         <figure class="step__figure" aria-label="${esc(sc.title)}">${scene(st.scene, st.reveal, true)}</figure>
         ${
           isLast
-            ? `<details class="step__alt"><summary>${esc(c.ui.textEquivalent)}: ${esc(sc.title)}</summary><p>${esc(sc.summary)}</p></details>`
+            ? // Not shown on screen; read by screen readers, which cannot see the chart.
+              `<p class="sr-only">${esc(c.ui.textEquivalent)}: ${esc(sc.summary)}</p>`
             : ''
         }
       </div>`;
