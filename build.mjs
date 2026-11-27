@@ -300,12 +300,13 @@ const closing = cl
       <p class="closing__kicker">${esc(cl.kicker)}</p>
       <h2 class="closing__title" id="closing-title" data-appear>${esc(cl.title)}</h2>
       <p class="closing__text">${md(cl.text)}</p>
+      ${cl.note ? `<p class="closing__note">${md(cl.note)}</p>` : ''}
     </div>
   </section>`
   : '';
 
 const pu = c.purpose;
-const purpose = `
+const purpose = !pu ? '' : `
   <section class="purpose" id="${esc(pu.id)}" aria-labelledby="${esc(pu.id)}-title">
     <div class="purpose__inner">
       <h2 class="purpose__title" id="${esc(pu.id)}-title">${esc(pu.title)}</h2>
@@ -345,7 +346,17 @@ const html = `<!doctype html>
 <link rel="preload" href="${base}assets/fonts/montserrat-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${base}assets/fonts/montserrat-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}styles.css?v=${cssV}">
-<script>document.documentElement.classList.add('js')</script>
+<script>
+document.documentElement.classList.add('js');
+// Always open on the cover: no restored scroll position on reload, and no jump for
+// links ending in #story / #top. Chapter links (e.g. #who-pays) still work.
+try {
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  var h = location.hash;
+  window.__tpiStartAtTop = !h || h === '#story' || h === '#top';
+  if (h === '#story' || h === '#top') history.replaceState(null, '', location.pathname + location.search);
+} catch (e) {}
+</script>
 <script src="${base}script.js?v=${jsV}" defer></script>
 </head>
 <body>

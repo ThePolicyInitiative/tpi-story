@@ -52,16 +52,9 @@
         },
         {
           "scene": "balance",
-          "reveal": 1,
-          "text": [
-            "On paper, it balances: projected revenue and spending are both **around $7 billion**."
-          ]
-        },
-        {
-          "scene": "balance",
           "reveal": 2,
           "text": [
-            "But a zero deficit leaves **debt and accumulated liabilities** unaddressed, and says nothing about who pays or who benefits."
+            "On paper it balances: projected revenue and spending are both **around $7 billion**. But a zero deficit leaves **debt and accumulated liabilities** unaddressed."
           ]
         }
       ],
@@ -493,34 +486,10 @@
     ],
     "teaser": "A budget can balance and still leave the hardest questions unanswered."
   },
-  "purpose": {
-    "id": "the-roundtable",
-    "title": "From shortcomings to a roadmap",
-    "intro": "TPI’s roundtable brings policymakers, public officials and experts together to decide what the budget should become.",
-    "items": [
-      {
-        "title": "A shared starting point",
-        "text": "TPI’s research on who pays and who benefits."
-      },
-      {
-        "title": "Concrete options",
-        "text": "Taxation, exemptions, spending and public financial management."
-      },
-      {
-        "title": "Feasibility and trade-offs",
-        "text": "Including the effects on vulnerable households."
-      }
-    ]
-  },
-  "prologue": {
-    "label": "Prologue",
-    "lines": [
-      "Every budget is a contract between a state and its people. It decides **who pays** for the state, and **who it serves**."
-    ]
-  },
   "closing": {
-    "kicker": "The question ahead",
+    "kicker": "The roundtable",
     "title": "What should the budget be?",
-    "text": "Areas of agreement and open questions from the roundtable will inform TPI’s forthcoming report of the same name."
+    "text": "Starting from TPI’s research, policymakers, public officials and experts will debate options for taxation, exemptions, spending and public financial management, and weigh their feasibility and trade-offs, including for vulnerable households.",
+    "note": "Areas of agreement and open questions will inform TPI’s forthcoming report, **“What Should the Budget Be?”**"
   }
 }

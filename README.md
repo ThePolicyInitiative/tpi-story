@@ -54,8 +54,7 @@ If the folder is in a Git repository connected to Netlify, `netlify.toml` alread
 
 ## How the content file works
 
-- `prologue.lines`: the opening statements shown one per screen after the cover.
-- `chapters[].teaser`: the line under each full-screen chapter title card. `closing`: the final "What should the budget be?" frame.
+- `chapters[].teaser`: the line under each full-screen chapter title card. `closing`: the final "What should the budget be?" screen, which also states the roundtable's purpose. Optional `prologue.lines` and `purpose` blocks can be added back.
 - `chapters[].steps[]`: each step is one story beat, with text paragraphs plus a `scene` and a `reveal` level. Text in `**double asterisks**` is shown in bold.
 - `scenes{}`: one chart per scene, made of panels. The panel types are `bars`, `slope`, `share`, `waffle`, `stat`, `increase`, `note` and `unresolved`. Any panel, bar or line with `"from": n` appears when a step reaches `reveal: n`.
 - `display` is the visible label (for example `~$7bn`). `sr` is how screen readers say it (for example "around 7 billion dollars").

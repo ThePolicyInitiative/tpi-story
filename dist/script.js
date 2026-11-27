@@ -8,6 +8,26 @@
   'use strict';
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  // ---------- 0. Open on the cover, and keep in-page links out of the address bar ----------
+  if (window.__tpiStartAtTop) {
+    const toTop = () => window.scrollTo(0, 0);
+    toTop();
+    window.addEventListener('load', toTop, { once: true });
+  }
+  // In-page links (contents, "Scroll to begin", skip link, back to top) scroll and move
+  // focus without adding #… to the URL, so a copied or reloaded link still opens on the cover.
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const target = document.getElementById(a.getAttribute('href').slice(1));
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'start' });
+    if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+  });
+
   const supportsIO = 'IntersectionObserver' in window;
   if (!supportsIO) return; // Static page remains fully readable.
 
