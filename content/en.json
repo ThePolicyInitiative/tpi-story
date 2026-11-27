@@ -1,0 +1,437 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+
+  "meta": {
+    "title": "Rebuilding Lebanon’s Fiscal Contract for a Fairer Society · The Policy Initiative",
+    "description": "Lebanon’s 2027 draft budget balances at around $7 billion. Who pays, and who benefits? A visual story from The Policy Initiative’s policy roundtable concept note.",
+    "shareTitle": "Lebanon’s 2027 draft budget balances at around $7 billion. Who pays, and who benefits?"
+  },
+
+  "ui": {
+    "skip": "Skip to the story",
+    "logoAlt": "The Policy Initiative",
+    "contents": "In this story",
+    "source": "Source",
+    "draftTag": "2027 draft",
+    "textEquivalent": "Chart as text",
+    "backToTop": "Back to top",
+    "scrollCue": "Scroll to begin",
+    "differentScale": "Different scale from the previous chart"
+  },
+
+  "sources": {
+    "cn": {
+      "text": "The Policy Initiative, “Rebuilding Lebanon’s Fiscal Contract for a Fairer Society,” concept note, policy roundtable, November 26, 2026, drawing on TPI research.",
+      "url": ""
+    }
+  },
+
+  "cover": {
+    "label": "Policy Roundtable · The Policy Initiative",
+    "title": "Rebuilding Lebanon’s Fiscal Contract for a Fairer Society",
+    "hook": "Lebanon’s 2027 draft budget balances at around $7 billion. **Who pays, and who benefits?**",
+    "dateline": "Concept note · November 26, 2026"
+  },
+
+  "chapters": [
+    {
+      "id": "balanced-budget",
+      "num": "01",
+      "title": "A balanced budget. What does it tell us?",
+      "steps": [
+        {
+          "scene": "spending",
+          "reveal": 1,
+          "text": [
+            "Lebanon’s financial collapse changed the size of the state. Public expenditure fell from about **$15.2 billion in 2019** to **$6 billion in 2026**."
+          ]
+        },
+        {
+          "scene": "spending",
+          "reveal": 2,
+          "text": [
+            "The **2027 draft budget**, now before Parliament, would spend **around $7 billion**. All three bars are drawn on the same scale."
+          ]
+        },
+        {
+          "scene": "balance",
+          "reveal": 1,
+          "text": [
+            "On paper, the draft balances. Projected revenue and projected spending both come to **around $7 billion**, a projected deficit of zero."
+          ]
+        },
+        {
+          "scene": "balance",
+          "reveal": 2,
+          "text": [
+            "But a zero deficit leaves the state’s **debt and accumulated liabilities unaddressed**. It also reveals little about who finances the state and who benefits from its spending."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "who-pays",
+      "num": "02",
+      "title": "Who pays?",
+      "steps": [
+        {
+          "scene": "taxShares",
+          "reveal": 1,
+          "text": [
+            "TPI’s research shows that the tax burden has shifted toward lower-income households.",
+            "The **poorest half of households**, whose income equals 11% of GDP, paid **20% of all taxes in 2019** and **26% in 2026**."
+          ]
+        },
+        {
+          "scene": "taxShares",
+          "reveal": 2,
+          "text": [
+            "Over the same period, the share paid by the **richest 1%**, whose income equals 20% of GDP and who hold about one-third of national wealth, fell from **14% to 7%**."
+          ]
+        },
+        {
+          "scene": "taxMix",
+          "reveal": 1,
+          "text": [
+            "**Consumption taxes account for about 79% of tax revenue.** Income, profits and wealth remain largely untaxed."
+          ]
+        },
+        {
+          "scene": "draftRevenue",
+          "reveal": 1,
+          "text": [
+            "The 2027 draft continues this pattern. It projects **total revenue rising by 14.2%**."
+          ]
+        },
+        {
+          "scene": "draftRevenue",
+          "reveal": 2,
+          "text": [
+            "**Fuel taxes and VAT account for more than half** of the additional tax revenue. Exemptions are left intact without justification, and revenue targets rest on optimistic assumptions amid a contracting economy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "who-benefits",
+      "num": "03",
+      "title": "Who benefits from public spending?",
+      "steps": [
+        {
+          "scene": "traceable",
+          "reveal": 1,
+          "text": [
+            "Public spending traceable to beneficiaries fell from **$13 billion in 2019** to **$4.3 billion in 2026**."
+          ]
+        },
+        {
+          "scene": "poorest",
+          "reveal": 1,
+          "text": [
+            "The amount reaching the **poorest half of households**, mostly through public hospitalization and social protection, fell from **$814 million in 2019** to **$617 million in 2026**."
+          ]
+        },
+        {
+          "scene": "youth",
+          "reveal": 1,
+          "text": [
+            "In 2026, **youth and families received only 15%** of traceable spending."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spending-increase",
+      "num": "04",
+      "title": "Where does the proposed spending increase go?",
+      "steps": [
+        {
+          "scene": "increase",
+          "reveal": 1,
+          "text": [
+            "In the 2027 draft, **personnel costs absorb more than 90%** of the proposed spending increase."
+          ]
+        },
+        {
+          "scene": "increase",
+          "reveal": 2,
+          "text": [
+            "That would bring **personnel costs to 65% of the full budget**."
+          ]
+        },
+        {
+          "scene": "increase",
+          "reveal": 3,
+          "text": [
+            "**Capital spending would rise by only around $25 million**, despite vast reconstruction and infrastructure needs. Resources reaching beneficiaries directly remain limited."
+          ]
+        }
+      ]
+    }
+  ],
+
+  "scenes": {
+    "spending": {
+      "title": "Public expenditure",
+      "unit": "US$ billion, all bars on the same scale",
+      "summary": "Horizontal bar chart of public expenditure: about $15.2 billion in 2019, $6 billion in 2026, and around $7 billion in the 2027 draft budget.",
+      "source": "cn",
+      "panels": [
+        {
+          "type": "bars",
+          "max": 15.2,
+          "items": [
+            { "label": "2019", "value": 15.2, "display": "$15.2bn", "sr": "about 15.2 billion dollars", "from": 1 },
+            { "label": "2026", "value": 6, "display": "$6bn", "sr": "6 billion dollars", "from": 1 },
+            { "label": "2027 draft", "value": 7, "display": "~$7bn", "sr": "around 7 billion dollars, draft", "draft": true, "from": 2 }
+          ]
+        }
+      ]
+    },
+
+    "balance": {
+      "title": "The 2027 draft budget balances",
+      "unit": "US$ billion, same scale as the previous chart",
+      "summary": "Two equal bars: projected revenue and projected spending in the 2027 draft budget are both around $7 billion, a projected deficit of zero. A separate note states that public debt and accumulated liabilities remain unaddressed.",
+      "source": "cn",
+      "draft": true,
+      "panels": [
+        {
+          "type": "bars",
+          "max": 15.2,
+          "items": [
+            { "label": "Revenue, 2027 draft", "value": 7, "display": "~$7bn", "sr": "around 7 billion dollars, projected", "draft": true, "from": 1 },
+            { "label": "Spending, 2027 draft", "value": 7, "display": "~$7bn", "sr": "around 7 billion dollars, projected", "draft": true, "from": 1 }
+          ]
+        },
+        {
+          "type": "note",
+          "from": 1,
+          "text": "Projected deficit: **zero**"
+        },
+        {
+          "type": "unresolved",
+          "from": 2,
+          "title": "Not resolved by the balance",
+          "text": "Public debt and accumulated liabilities"
+        }
+      ]
+    },
+
+    "taxShares": {
+      "title": "Share of all taxes paid",
+      "unit": "% of total taxes, 2019 and 2026",
+      "summary": "Slope chart of the share of all taxes paid. The poorest half of households rose from 20% in 2019 to 26% in 2026. The richest 1% fell from 14% to 7%.",
+      "source": "cn",
+      "panels": [
+        {
+          "type": "slope",
+          "max": 30,
+          "years": ["2019", "2026"],
+          "series": [
+            {
+              "label": "Poorest half of households",
+              "values": [20, 26],
+              "display": ["20%", "26%"],
+              "tone": "accent",
+              "from": 1
+            },
+            {
+              "label": "Richest 1%",
+              "values": [14, 7],
+              "display": ["14%", "7%"],
+              "tone": "primary",
+              "from": 2
+            }
+          ]
+        }
+      ]
+    },
+
+    "taxMix": {
+      "title": "Where tax revenue comes from",
+      "unit": "% of tax revenue",
+      "summary": "Part-to-whole bar: consumption taxes account for about 79% of tax revenue; all other taxes make up the remainder.",
+      "source": "cn",
+      "panels": [
+        {
+          "type": "share",
+          "from": 1,
+          "headline": "About 79%",
+          "headlineSr": "About 79 percent",
+          "denominator": "of tax revenue comes from consumption taxes",
+          "segments": [
+            { "label": "Consumption taxes", "value": 79, "tone": "accent" },
+            { "label": "All other taxes", "value": 21, "tone": "rest" }
+          ]
+        }
+      ]
+    },
+
+    "draftRevenue": {
+      "title": "Revenue in the 2027 draft",
+      "unit": "Projected change",
+      "summary": "The 2027 draft budget projects total revenue rising by 14.2%. Fuel taxes and VAT account for more than half of the additional tax revenue.",
+      "source": "cn",
+      "draft": true,
+      "panels": [
+        {
+          "type": "stat",
+          "from": 1,
+          "value": "+14.2%",
+          "sr": "an increase of 14.2 percent",
+          "label": "projected rise in total revenue, 2027 draft"
+        },
+        {
+          "type": "share",
+          "from": 2,
+          "headline": "More than half",
+          "denominator": "of the additional tax revenue, 2027 draft",
+          "segments": [
+            { "label": "Fuel taxes and VAT", "value": 50, "atLeast": true, "tone": "accent" }
+          ],
+          "ticks": [50]
+        }
+      ]
+    },
+
+    "traceable": {
+      "title": "Public spending traceable to beneficiaries",
+      "unit": "US$ billion, same scale",
+      "summary": "Horizontal bar chart: public spending traceable to beneficiaries fell from $13 billion in 2019 to $4.3 billion in 2026.",
+      "source": "cn",
+      "panels": [
+        {
+          "type": "bars",
+          "max": 13,
+          "items": [
+            { "label": "2019", "value": 13, "display": "$13bn", "sr": "13 billion dollars", "from": 1 },
+            { "label": "2026", "value": 4.3, "display": "$4.3bn", "sr": "4.3 billion dollars", "from": 1 }
+          ]
+        }
+      ]
+    },
+
+    "poorest": {
+      "title": "Spending reaching the poorest half of households",
+      "unit": "US$ million",
+      "scaleNote": true,
+      "summary": "Horizontal bar chart: spending reaching the poorest half of households fell from $814 million in 2019 to $617 million in 2026, mostly through public hospitalization and social protection.",
+      "source": "cn",
+      "panels": [
+        {
+          "type": "bars",
+          "max": 814,
+          "items": [
+            { "label": "2019", "value": 814, "display": "$814m", "sr": "814 million dollars", "from": 1 },
+            { "label": "2026", "value": 617, "display": "$617m", "sr": "617 million dollars", "from": 1 }
+          ]
+        },
+        {
+          "type": "note",
+          "from": 1,
+          "text": "Mostly through **public hospitalization and social protection**"
+        }
+      ]
+    },
+
+    "youth": {
+      "title": "Who received traceable spending in 2026",
+      "unit": "Each square is 1% of traceable spending",
+      "summary": "Grid of 100 squares, each representing 1% of traceable public spending in 2026. Fifteen squares are highlighted: youth and families received 15%.",
+      "source": "cn",
+      "panels": [
+        {
+          "type": "waffle",
+          "from": 1,
+          "value": 15,
+          "headline": "15%",
+          "headlineSr": "15 percent",
+          "denominator": "of traceable spending went to youth and families, 2026",
+          "legend": ["Youth and families", "All other traceable spending"]
+        }
+      ]
+    },
+
+    "increase": {
+      "title": "The proposed spending increase",
+      "unit": "2027 draft budget",
+      "summary": "Three figures from the 2027 draft budget. First, personnel costs absorb more than 90% of the proposed spending increase. Second, personnel costs would account for 65% of the full budget. Third, capital spending would rise by around $25 million, shown against the full draft budget of around $7 billion.",
+      "source": "cn",
+      "draft": true,
+      "inlineOnlyNew": true,
+      "panels": [
+        {
+          "type": "share",
+          "from": 1,
+          "headline": "More than 90%",
+          "headlineSr": "More than 90 percent",
+          "denominator": "of the proposed spending increase goes to personnel costs",
+          "segments": [
+            { "label": "Personnel costs", "value": 90, "atLeast": true, "tone": "primary" }
+          ],
+          "ticks": [90]
+        },
+        {
+          "type": "share",
+          "from": 2,
+          "headline": "65%",
+          "headlineSr": "65 percent",
+          "denominator": "of the full 2027 draft budget would be personnel costs",
+          "segments": [
+            { "label": "Personnel costs", "value": 65, "tone": "primary" },
+            { "label": "Everything else", "value": 35, "tone": "rest" }
+          ]
+        },
+        {
+          "type": "increase",
+          "from": 3,
+          "value": "+$25m",
+          "qualifier": "around",
+          "sr": "an increase of around 25 million dollars",
+          "label": "increase in capital spending, 2027 draft",
+          "scale": {
+            "part": 25,
+            "whole": 7000,
+            "partLabel": "Capital spending increase",
+            "wholeLabel": "Full 2027 draft budget, around $7bn"
+          }
+        }
+      ]
+    }
+  },
+
+  "questions": {
+    "id": "next-five-years",
+    "num": "05",
+    "title": "What should Lebanon’s budget do over the next five years?",
+    "intro": "The roundtable shifts the debate from these shortcomings to what the budget should become. It asks four questions.",
+    "items": [
+      "How should Lebanon raise and allocate public resources?",
+      "Who should bear the cost?",
+      "Who should benefit?",
+      "What reforms would make those choices possible?"
+    ]
+  },
+
+  "purpose": {
+    "id": "the-roundtable",
+    "title": "Why this roundtable",
+    "intro": "The roundtable brings together policymakers, public officials and experts to work towards a more equitable, efficient and sustainable fiscal system.",
+    "items": [
+      { "title": "A shared starting point", "text": "Participants will use TPI’s research on who pays taxes and who benefits from public spending as a common evidence base." },
+      { "title": "Concrete options", "text": "They will debate options for taxation, exemptions, spending and public financial management." },
+      { "title": "Feasibility and trade-offs", "text": "They will examine the feasibility and trade-offs of reforms, including their effects on vulnerable households." },
+      { "title": "What comes next", "text": "Areas of agreement and open questions will inform TPI’s forthcoming report, **“What Should the Budget Be?”**" }
+    ]
+  },
+
+  "footer": {
+    "notes": [
+      "All figures are taken from TPI’s concept note for the policy roundtable, which draws on TPI research.",
+      "Figures labelled “2027 draft” refer to the draft budget now before Parliament. They are projections, not outcomes."
+    ],
+    "org": "The Policy Initiative"
+  }
+}

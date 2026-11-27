@@ -1,0 +1,11 @@
+{
+  "name": "tpi-fiscal-contract-story",
+  "private": true,
+  "type": "module",
+  "description": "Scrollytelling page: Rebuilding Lebanon's Fiscal Contract for a Fairer Society (The Policy Initiative)",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node serve.mjs"
+  },
+  "engines": { "node": ">=18" }
+}
