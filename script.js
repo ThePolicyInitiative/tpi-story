@@ -13,7 +13,10 @@
   if (window.__tpiStartAtTop) {
     const toTop = () => window.scrollTo(0, 0);
     toTop();
-    window.addEventListener('load', toTop, { once: true });
+    document.addEventListener('DOMContentLoaded', toTop, { once: true });
+    window.addEventListener('load', () => { toTop(); requestAnimationFrame(toTop); }, { once: true });
+    // Returning with the Back button can restore a page from memory mid-story; reset it too.
+    window.addEventListener('pageshow', (e) => { if (e.persisted) toTop(); });
   }
   // In-page links (contents, "Scroll to begin", skip link, back to top) scroll and move
   // focus without adding #… to the URL, so a copied or reloaded link still opens on the cover.
